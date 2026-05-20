@@ -1,28 +1,33 @@
-import { useSessionStore } from '../../store/useSessionStore.js';
+import { useState } from 'react';
 
-import { buildScoreTrend } from '../../domain/statistics/statistics-engine.js';
+import { aggregateStatistics } from '../../domain/statistics/aggregated-statistics.js';
+import { filterSessionsByPeriod } from '../../domain/statistics/statistics-periods.js';
 
-import { ScoreHistoryChart } from '../components/charts/ScoreHistoryChart.jsx';
+import { useSessionHistory } from '../hooks/useSessionHistory.js';
+
+import { AggregatedStatisticsCard } from '../components/statistics/AggregatedStatisticsCard.jsx';
+import { ScoreTrendChart } from '../components/statistics/ScoreTrendChart.jsx';
+import { StatisticsPeriods } from '../components/statistics/StatisticsPeriods.jsx';
 
 export function StatisticsScreen() {
-  const session = useSessionStore(state => state.currentSession);
+  const [period, setPeriod] = useState('month');
 
-  const chartData = buildScoreTrend([
-    {
-      date: new Date().toLocaleDateString(),
-      totalScore: session.totalScore
-    }
-  ]);
+  const { sessions } = useSessionHistory();
+
+  const filtered = filterSessionsByPeriod(sessions, period);
+  const statistics = aggregateStatistics(filtered);
 
   return (
     <section className="statistics-screen">
-      <header className="segmented-control">
-        <button className="active">Месяц</button>
-        <button>Год</button>
-      </header>
+      <StatisticsPeriods
+        active={period}
+        onChange={setPeriod}
+      />
 
-      <div className="statistics-card">
-        <ScoreHistoryChart data={chartData} />
+      <AggregatedStatisticsCard statistics={statistics} />
+
+      <div className="statistics-chart-card">
+        <ScoreTrendChart sessions={filtered} />
       </div>
     </section>
   );
