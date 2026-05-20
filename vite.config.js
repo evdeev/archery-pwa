@@ -10,10 +10,21 @@ export default defineConfig({
     assetsInlineLimit: 0,
     rollupOptions: {
       output: {
-        manualChunks: {
-          react: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          state: ['zustand']
+        manualChunks(id) {
+          if (id.includes('react-router-dom')) {
+            return 'router';
+          }
+
+          if (
+            id.includes('react') ||
+            id.includes('react-dom')
+          ) {
+            return 'react';
+          }
+
+          if (id.includes('zustand')) {
+            return 'state';
+          }
         }
       }
     }
