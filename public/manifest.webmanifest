@@ -8,12 +8,12 @@
   "theme_color": "#f2f2f7",
   "icons": [
     {
-      "src": "/archery-pwa/icons/icon-192.png",
-      "sizes": "192x192",
+      "src": "/archery-pwa/icons/archery-icon-final-1B-180.png",
+      "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/archery-pwa/icons/icon-512.png",
+      "src": "/archery-pwa/icons/archery-icon-final-1B-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
