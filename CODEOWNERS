@@ -1,0 +1,8 @@
+*
+/src/app/
+/src/domain/
+/src/services/
+/src/components/
+/src/screens/
+/src/styles/
+/public/
