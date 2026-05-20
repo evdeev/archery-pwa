@@ -1,4 +1,5 @@
-import { HistoryScreen } from './screens/HistoryScreen.jsx';
+import { AppRouter } from './router/AppRouter.jsx';
+import { TabBar } from './components/navigation/TabBar.jsx';
 
 export function App() {
   return (
@@ -8,15 +9,10 @@ export function App() {
       </header>
 
       <main className="screen-container">
-        <HistoryScreen />
+        <AppRouter />
       </main>
 
-      <nav className="tab-bar">
-        <button className="tab active">История</button>
-        <button className="tab">Статистика</button>
-        <button className="tab">Экипировка</button>
-        <button className="tab">Настройки</button>
-      </nav>
+      <TabBar />
     </div>
   );
 }
