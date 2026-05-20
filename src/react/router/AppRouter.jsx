@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import { LoadingState } from '../components/feedback/LoadingState.jsx';
 
@@ -11,18 +11,13 @@ const SettingsScreen = lazy(() => import('../screens/SettingsScreen.jsx').then(m
 const OnboardingScreen = lazy(() => import('../screens/OnboardingScreen.jsx').then(module => ({ default: module.OnboardingScreen })));
 
 export function AppRouter() {
-  return (
-    <BrowserRouter basename="/archery-pwa/">
-      <Suspense fallback={<LoadingState />}>
-        <Routes>
-          <Route path="/" element={<HistoryScreen />} />
-          <Route path="/onboarding" element={<OnboardingScreen />} />
-          <Route path="/session" element={<SessionEditorScreen />} />
-          <Route path="/statistics" element={<StatisticsScreen />} />
-          <Route path="/equipment" element={<EquipmentScreen />} />
-          <Route path="/settings" element={<SettingsScreen />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
-  );
+return (
+<Suspense fallback={<LoadingState />}> <Routes>
+  <Route path="/" element={<HistoryScreen />} />
+  <Route path="/onboarding" element={<OnboardingScreen />} />
+  <Route path="/session" element={<SessionEditorScreen />} />
+  <Route path="/statistics" element={<StatisticsScreen />} />
+  <Route path="/equipment" element={<EquipmentScreen />} />
+  <Route path="/settings" element={<SettingsScreen />} /> </Routes> </Suspense>
+);
 }
