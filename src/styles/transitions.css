@@ -1,0 +1,29 @@
+.screen-container {
+  animation: screen-enter 180ms ease;
+}
+
+@keyframes screen-enter {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.score-key {
+  transition:
+    transform 120ms ease,
+    opacity 120ms ease;
+}
+
+.score-key:active {
+  transform: scale(0.94);
+}
+
+.tab {
+  transition: color 120ms ease;
+}
