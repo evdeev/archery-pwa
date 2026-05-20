@@ -9,6 +9,7 @@ export function ScoreKeyboard({ onScore }) {
           type="button"
           className={`score-key score-${score.toLowerCase()}`}
           onClick={() => onScore(score)}
+          aria-label={`Очки ${score}`}
         >
           {score}
         </button>
