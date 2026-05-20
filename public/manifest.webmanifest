@@ -1,0 +1,10 @@
+{
+  "name": "Archery PWA",
+  "short_name": "Archery",
+  "display": "standalone",
+  "start_url": "/archery-pwa/",
+  "scope": "/archery-pwa/",
+  "background_color": "#f2f2f7",
+  "theme_color": "#f2f2f7",
+  "icons": []
+}
