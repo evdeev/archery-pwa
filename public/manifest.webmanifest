@@ -1,0 +1,21 @@
+{
+  "name": "Archery Scores",
+  "short_name": "Archery",
+  "display": "standalone",
+  "start_url": "/archery-pwa/",
+  "scope": "/archery-pwa/",
+  "background_color": "#f2f2f7",
+  "theme_color": "#f2f2f7",
+  "icons": [
+    {
+      "src": "/archery-pwa/icons/archery-icon-final-1B-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/archery-pwa/icons/archery-icon-final-1B-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

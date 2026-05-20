@@ -1,0 +1,77 @@
+.shot-cell.active {
+  border: 2px solid #007aff;
+  box-shadow: 0 0 0 2px rgba(0,122,255,0.12);
+}
+
+.series-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.score-key {
+  border: none;
+  border-radius: 14px;
+  min-width: 52px;
+  min-height: 52px;
+  font-weight: 700;
+}
+
+.score-x,
+.score-10,
+.score-9 {
+  background: #ffd60a;
+  color: #111111;
+}
+
+.score-8,
+.score-7 {
+  background: #ff453a;
+  color: white;
+}
+
+.score-6,
+.score-5 {
+  background: #0a84ff;
+  color: white;
+}
+
+.score-4,
+.score-3 {
+  background: #1c1c1e;
+  color: white;
+}
+
+.score-2,
+.score-1,
+.score-m {
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #d1d1d6;
+}
+
+.floating-add-button {
+  position: fixed;
+  right: 20px;
+  bottom: 110px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #007aff;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 8px 24px rgba(0,122,255,0.25);
+}
+
+.session-note-editor,
+.series-comment {
+  width: 100%;
+  border: none;
+  resize: none;
+  background: white;
+  border-radius: 18px;
+  padding: 16px;
+  font: inherit;
+}

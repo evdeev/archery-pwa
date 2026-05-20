@@ -1,0 +1,22 @@
+:root {
+  --color-background: #f2f2f7;
+  --color-surface: #ffffff;
+  --color-primary: #007aff;
+  --color-text: #111111;
+  --color-secondary-text: #6b7280;
+
+  --radius-card: 18px;
+  --radius-button: 14px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  --font-size-caption: 12px;
+  --font-size-body: 16px;
+  --font-size-title: 24px;
+
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.04);
+}

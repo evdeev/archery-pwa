@@ -1,0 +1,16 @@
+name: Release Notes
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  release-notes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print release info
+        run: echo "Release published"
