@@ -1,6 +1,7 @@
 import { useSessionStore } from '../../store/useSessionStore.js';
 
 import { SessionCard } from '../components/SessionCard.jsx';
+import { CreateSessionButton } from '../components/session/CreateSessionButton.jsx';
 
 export function HistoryScreen() {
   const session = useSessionStore(state => state.currentSession);
@@ -16,6 +17,8 @@ export function HistoryScreen() {
           possibleScore={session.possibleScore}
         />
       </div>
+
+      <CreateSessionButton />
     </section>
   );
 }
