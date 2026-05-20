@@ -19,3 +19,16 @@
 - ROBOTS.md.
 - CONTRIBUTING.md.
 - Release workflow.
+- Issue templates.
+- PR template.
+- ADR architecture.
+- Design tokens.
+- Router abstraction.
+- Global store.
+- Event bus.
+- Migration registry.
+- Session repository.
+- Local storage service.
+- Typed domain schemas.
+- UI primitives.
+- PWA update strategy.
